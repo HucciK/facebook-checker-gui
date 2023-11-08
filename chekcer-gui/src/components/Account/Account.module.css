@@ -1,0 +1,19 @@
+.account {
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.account_content_header {
+    margin-top: 25px;
+    color: var(--content-text-color);
+    font-weight: 500;
+}
+
+.account_content {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

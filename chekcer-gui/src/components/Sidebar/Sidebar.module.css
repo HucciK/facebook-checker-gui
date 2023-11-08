@@ -1,0 +1,54 @@
+.sidebar {
+    margin-left: 50px;
+
+    width: 50px;
+    height: 500px;
+    background: linear-gradient(160deg, #35334f, #1f4645 30%, var(--sub-color), var(--sub-color));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 35px;
+}
+
+.app_control, .app_settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app_control_home, #app_control_user, #app_control_checker {
+    margin-top: 25px;
+    width: 25px;
+    height: 25px;
+    transition: var(--default-transition);
+    border-radius: 0;
+}
+
+#app_control_home:hover, #app_control_user:hover, #app_control_checker:hover {
+    cursor: pointer;
+    transform: scale(115%);
+}
+
+.app_settings {
+    margin-bottom: 25px;
+}
+
+#app_control_settings, #app_control_proxy, #app_control_exit {
+    margin-bottom: 25px;
+    width: 25px;
+    height: 25px;
+    transition: var(--default-transition);
+}
+
+#app_control_settings:hover, #app_control_proxy:hover, #app_control_exit:hover {
+    cursor: pointer;
+    transform: scale(115%);
+}
+
+.active {
+    color: #3abdcf;
+}

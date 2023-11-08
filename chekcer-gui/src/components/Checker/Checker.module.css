@@ -1,0 +1,147 @@
+.checker {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.checker_content {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checker_background_logo {
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    opacity: 0.3;
+    width: 100px;
+    height: 100px;
+}
+
+.checker_content_header {
+    margin-top: 25px;
+    color: var(--content-text-color);
+    font-weight: 500;
+}
+
+.check_result {
+    width: 765px;
+    height: 375px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.checker_result_header  {
+    height: 35px;
+    width: 95%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.checker_result_header > span {
+    width: calc(95% / 6);
+    text-align: center;
+    color: var(--content-text-color);
+}
+
+.check_result_preview {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--sub-color);
+    overflow: scroll;
+}
+
+.check_result_stats {
+    width: 100%;
+    height: 15px;
+    font-size: 10px;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checker_status {
+    margin-left: auto;
+    color: var(--content-text-color);
+}
+
+.checker_status_lamp {
+    width: 5px;
+    height: 5px;
+    background: crimson;
+    border-radius: 50%;
+    margin-left: 3px;
+    margin-right: 15px;
+}
+
+.lamp_active {
+    background: mediumspringgreen;
+}
+
+.checker_handling {
+    width: 765px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checker_start_button {
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 25px;
+    margin-left: 15px;
+
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+
+    color: var(--accent-color);
+    transition: var(--default-transition);
+}
+
+.checker_start_button:hover {
+    transform: scale(105%);
+    text-shadow: 0 0 1px var(--accent-color);
+}
+
+.checker_remove_result_wrap {
+    width: 15px;
+    height: 15px;
+    background: none;
+    outline: none;
+    border: none;
+
+    margin-right: 15px;
+}
+
+.checker_remove_result {
+    width: 100%;
+    height: 100%;
+
+    color: var(--content-text-color);
+    cursor: pointer;
+
+    transition: var(--slow-transition);
+}
+
+.checker_remove_result:hover {
+    color: #da2146;
+    scale: 120%;
+}

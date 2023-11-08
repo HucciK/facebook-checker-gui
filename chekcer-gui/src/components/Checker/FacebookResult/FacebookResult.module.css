@@ -1,0 +1,35 @@
+.fb_account {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.fb_account:first-child {
+    margin-top: 20px;
+}
+
+.fb_account_content {
+    width: 95%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #e3e3e3;
+    border-radius: 5px;
+
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.fb_account_content > span {
+    width: calc(95% / 6);
+    text-align: center;
+    color: var(--sub-color);
+}

@@ -1,0 +1,13 @@
+.settings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.settings_content {
+    background: #2c2d41;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

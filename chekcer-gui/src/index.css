@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    color: var(--main-color);
+    background: transparent;
+}
+
+body {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content {
+    width: 850px;
+}
+
+:root {
+    --main-color: white;
+    --sub-color: #2c2d41;
+    --accent-color: #3abdcf;
+    --content-text-color: darkgray;
+    --default-transition: 0.2s;
+    --slow-transition: 0.5s;
+}

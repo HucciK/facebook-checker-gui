@@ -1,0 +1,53 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "chekcer-gui",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true,
+        "sidecar": true,
+        "scope": [
+          { "name": "./cmd", "sidecar": true }
+        ]
+      },
+      "dialog": {
+        "open": true
+      }
+    },
+    "bundle": {
+      "externalBin": ["./cmd"],
+      "active": true,
+      "targets": "all",
+      "identifier": "m177-checker",
+      "icon": [
+        "icons/m177-256256.png"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "chekcer-gui",
+        "decorations": true,
+        "transparent": false,
+        "width": 1000,
+        "height": 630
+      }
+    ]
+  }
+}
