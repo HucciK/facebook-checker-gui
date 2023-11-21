@@ -5,10 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Check from "./store/check.ts";
 import Auth from "./store/auth.ts";
 import Settings from "./store/settings.ts";
-import {Command} from "@tauri-apps/api/shell";
-const cmd = Command.sidecar("./cmd")
-const output = cmd.execute()
-output.then(r => console.log(r))
+
 
 const check = new Check()
 const auth = new Auth()

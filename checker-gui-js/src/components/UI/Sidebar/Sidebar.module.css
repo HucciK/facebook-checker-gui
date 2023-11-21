@@ -1,0 +1,45 @@
+.sidebar {
+    height: 100%;
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(160deg, #35334f, #1f4645 30%, var(--sub-color), var(--sub-color));
+    border-radius: 35px;
+
+    margin-right: 50px;
+}
+
+.selector, .settings {
+    height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.selector *, .settings * {
+    width: 25px;
+    height: 25px;
+}
+
+.selector {
+    margin-top: 35px;
+}
+
+.settings {
+    margin-bottom: 35px;
+}
+
+.active {
+    fill: #3abdcf;
+}
+
+.disabled {
+    fill: white;
+}

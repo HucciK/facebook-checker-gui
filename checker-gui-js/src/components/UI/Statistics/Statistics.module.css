@@ -1,0 +1,12 @@
+.statistics {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats_points {
+    font-weight: 400;
+    color: var(--content-text-color);
+    margin-bottom: 15px;
+}

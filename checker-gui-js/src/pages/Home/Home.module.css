@@ -1,0 +1,58 @@
+.home {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_header {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--content-text-color);
+}
+
+.home_internal {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 25px;
+}
+
+.home_internal_left_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doughnut_graph {
+    width: 175px;
+    height: 175px;
+
+    margin-top: 75px;
+}
+
+
+.line_graph {
+    width: 525px;
+    height: 325px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line_graph_render {
+    width: 100%;
+    height: 100%;
+}
+
+.line_graph_text {
+    color: var(--content-text-color);
+}

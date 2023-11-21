@@ -1,7 +1,7 @@
 .auth {
     width: 100vw;
     height: 101vh;
-    background: radial-gradient(circle at 110% 0%,var(--accent-color) 0%, var(--sub-color) 35%);
+    background: radial-gradient(circle at 110% 0%, var(--accent-color) 0%, var(--sub-color) 35%);
 }
 
 .auth_content {

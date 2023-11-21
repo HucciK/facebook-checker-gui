@@ -1,15 +1,26 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
+use std::env;
+use tauri::api::process::{Command, CommandEvent};
+
 
 fn main() {
+    let mut bin = "./bin/cmd-x86_64-pc-windows-msvc.exe";
+    if env::consts::OS == "macos" {
+       bin = "./bin/cmd-aarch64-apple-darwin";
+    }
+
+    println!("{}", bin);
+    tauri::async_runtime::spawn(async move {
+      let (mut rx, mut child) = Command::new(bin)
+        .spawn()
+        .expect("Failed to spawn cargo");
+    });
+
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        .plugin(tauri_plugin_websocket::init())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
+

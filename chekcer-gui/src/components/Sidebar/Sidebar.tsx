@@ -34,7 +34,7 @@ function Sidebar() {
     return (
         <div className={styles.sidebar}>
             <div className={styles.app_control}>
-                <NavLink className={({isActive}) => activateHome(isActive)} to={"/home"}><FaHouse className={homeActive ? styles.active : styles.null} id={styles["app_control_home"]}/></NavLink>
+                <NavLink className={({ isActive}) => activateHome(isActive)} to={"/home"}><FaHouse className={homeActive ? styles.active : styles.null} id={styles["app_control_home"]}/></NavLink>
                 <NavLink className={({ isActive }) => activateAccount(isActive)} to={"/account"}><FaUser className={accountActive ? styles.active : styles.null} id={styles["app_control_user"]}/></NavLink>
                 <NavLink className={({ isActive }) => activateCheck(isActive)} to={"/checker"}><FaListCheck className={checkActive ? styles.active : styles.null} id={styles["app_control_checker"]}/></NavLink>
             </div>

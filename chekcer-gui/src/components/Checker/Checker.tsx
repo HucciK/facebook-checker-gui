@@ -41,7 +41,7 @@ function Checker() {
                     </div>
                 </div>
                 <div className={styles.checker_handling}>
-                    <button disabled={check.isConnected} className={styles.checker_start_button} onClick={() => check.start(settings.checker, auth.sessionHash)}>START</button>
+                    <button disabled={check.isConnected} className={styles.checker_start_button} onClick={check.start(settings.checker, auth.sessionHash)}>START</button>
                     <button disabled={check.isConnected} className={styles.checker_remove_result_wrap} onClick={() => check.removeResult()}><FaTrashCan className={styles.checker_remove_result}/></button>
                 </div>
             </div>
