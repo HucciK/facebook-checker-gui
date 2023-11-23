@@ -33,7 +33,7 @@ export default class Check {
         makeAutoObservable(this)
     }
 
-    async start(hash) {
+    async start(hash, paths) {
         this.removeAccounts();
         this.setIsConnected(true);
         try {
@@ -43,7 +43,9 @@ export default class Check {
                 }
             });
 
-            ws.send(JSON.stringify({"AAAA":"ASDASD"}));
+            ws.send(JSON.stringify({
+                paths: paths
+            }));
 
             ws.addListener((m) => this.checkClosed(m));
             ws.addListener((m) => this.addAccount(m));

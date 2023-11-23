@@ -37,9 +37,18 @@
 }
 
 .active {
-    fill: #3abdcf;
+    fill: var(--accent-color);
 }
 
 .disabled {
     fill: white;
+}
+
+.exit {
+    fill: #cc6d6d;
+    cursor: pointer;
+}
+
+.exit:hover {
+    scale: 110%;
 }

@@ -9,7 +9,7 @@ import Statistics from "../../components/UI/Statistics/Statistics.jsx";
 
 
 function Checker() {
-    const {store,check} = useContext(StoreContext);
+    const {store,check, settings} = useContext(StoreContext);
     const indicator = [styles.status_indicator]
     if (check.isConnected) {
         indicator.push(styles.active);
@@ -43,7 +43,7 @@ function Checker() {
                     </div>
                 </div>
                 <div className={styles.checker_handling}>
-                    <button disabled={check.isConnected} className={styles.start_button} onClick={() => check.start(store.session)}>START</button>
+                    <button disabled={check.isConnected} className={styles.start_button} onClick={() => check.start(store.session, settings.paths)}>START</button>
                     <FaTrashCan className={styles.remove_result_button} onClick={check.isConnected ? null : check.removeAccounts}/>
                 </div>
             </div>
