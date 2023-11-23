@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import styles from "./Auth.module.css";
 import KeyInput from "../../components/UI/input/KeyInput/KeyInput.jsx";
 import {FaArrowRightToBracket} from "react-icons/fa6";
+import Titlebar from "../../components/UI/Titlebar/Titlebar.jsx";
 
 function Auth() {
     const {store} = useContext(StoreContext);
@@ -17,6 +18,7 @@ function Auth() {
 
     return (
         <div className={styles.auth}>
+            <Titlebar/>
             <div className={styles.auth_content}>
                 <div className={styles.auth_handling}>
                     <KeyInput

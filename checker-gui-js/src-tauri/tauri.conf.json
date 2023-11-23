@@ -6,12 +6,15 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "checker-gui-js",
+    "productName": "M177 Facebook",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
       "all": true,
+      "window": {
+        "all": true
+      },
       "shell": {
         "all": true,
         "sidecar": true,
@@ -36,13 +39,16 @@
     "security": {
       "csp": null
     },
+    "macOSPrivateApi": true,
     "windows": [
       {
         "fullscreen": false,
-        "resizable": true,
-        "title": "checker-gui-js",
+        "resizable": false,
+        "title": "M177 Facebook",
         "width": 1000,
-        "height": 600
+        "height": 600,
+        "decorations": false,
+        "transparent": true
       }
     ]
   }

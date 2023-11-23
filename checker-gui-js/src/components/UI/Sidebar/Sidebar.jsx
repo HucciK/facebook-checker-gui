@@ -6,9 +6,7 @@ import { exit } from '@tauri-apps/api/process';
 
 function Sidebar() {
 
-    // <FaUser/>
-    // <FaListCheck/>
-    async function closeApp() {
+    async function close() {
         await exit(1);
     }
 
@@ -23,7 +21,7 @@ function Sidebar() {
             <div className={styles.settings}>
                 <NavLink children={({isActive}) => <FaGear className={isActive ? styles.active : styles.disabled}/>} to={"/settings"}/>
                 <FaLocationDot style={{color:"grey"}}/>
-                <FaDoorOpen className={styles.exit} onClick={closeApp}/>
+                <FaDoorOpen className={styles.exit} onClick={close}/>
             </div>
         </div>
     )
