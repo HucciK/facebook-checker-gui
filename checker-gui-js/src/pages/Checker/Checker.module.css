@@ -84,8 +84,13 @@
     align-items: center;
 }
 
+.total {
+    font-size: 10px;
+}
+
 .status {
     font-size: 10px;
+    margin-left: 15px;
 }
 
 .status_indicator {

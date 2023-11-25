@@ -4,8 +4,9 @@ import {makeAutoObservable} from "mobx";
 const CHECK_URL = "ws://localhost:8080/facebook/start";
 
 export default class Check {
-    accounts = []
-    isConnected = false
+    accounts = [];
+    isConnected = false;
+    counter = 0;
 
     checkClosed = (msg) =>  {
         if (msg.type === "Close") {
@@ -13,16 +14,26 @@ export default class Check {
         }
     }
 
-    addAccount = (msg) => {
+    addAccount = (rawMsg) => {
         if (!this.isConnected) {
             return
         }
-        const acc = JSON.parse(msg.data)
-        this.accounts.push(acc.data.stats)
+        const msg = JSON.parse(rawMsg.data)
+        console.log(msg)
+        if (msg.type === "Error") {
+            this.counter++
+            return;
+        }
+
+        this.accounts.push(msg.data.stats)
     }
 
     removeAccounts = () => {
         this.accounts.splice(0)
+    }
+
+    setCounter(i) {
+        this.counter = i
     }
 
     setIsConnected = (bool) => {
@@ -35,6 +46,7 @@ export default class Check {
 
     async start(hash, paths) {
         this.removeAccounts();
+        this.setCounter(0);
         this.setIsConnected(true);
         try {
             const  ws = await WebSocket.connect(CHECK_URL, {

@@ -14,7 +14,8 @@ function Checker() {
     if (check.isConnected) {
         indicator.push(styles.active);
     }
-    const total = check.accounts.length
+    const total = check.counter
+    const found = check.accounts.length
 
     return (
         <div className={styles.checker}>
@@ -37,7 +38,7 @@ function Checker() {
                 </div>
                 <div className={styles.checker_status_bar}>
                     <div className={styles.status_bar_content}>
-                        {/*<Statistics total={total}/>*/}
+                        <span className={styles.total}>TOTAL: {total}</span>
                         <span className={styles.status}>STATUS</span>
                         <div className={indicator.join(' ')}></div>
                     </div>
